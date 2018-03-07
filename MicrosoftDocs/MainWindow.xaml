@@ -5,199 +5,495 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MicrosoftDocs"
         mc:Ignorable="d"
-        Title="MainWindow" Height="Auto" Width="Auto" SizeChanged="Window_SizeChanged">
+        Title="MainWindow" Height="1002" Width="940" 
+        MinWidth="940" MinHeight="1002"
+        SizeChanged="Window_SizeChanged">
 
-	<ScrollViewer>
-		<Grid>
-			<Grid.RowDefinitions>
-				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="40"/>
-				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="Auto"/>
-				<RowDefinition />
-				<RowDefinition />
-				<RowDefinition />
-			</Grid.RowDefinitions>
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="100"/>
-				<ColumnDefinition/>
-				<ColumnDefinition Width="100"/>
-			</Grid.ColumnDefinitions>
+    <ScrollViewer>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+                <RowDefinition Height="50"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-			<!--////////////////////////////////////////////////////////////////////////////-->
+            <!--////////////////////////////////////////////////////////////////////////////-->
 
-			<Grid Grid.Row="0" Grid.Column="1">
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="Auto"/>
-					<ColumnDefinition Width="Auto"/>
-					<ColumnDefinition Width="Auto"/>
-					<ColumnDefinition Width="Auto"/>
-					<ColumnDefinition Width="60"/>
-					<ColumnDefinition />
-				</Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
 
-				<Button Grid.Column="0" BorderBrush="Transparent" Content="Microsoft" Background="Transparent"/>
+                <DockPanel Grid.Column="0">
+                    <Image Source="Microsoft.png"/>
+                    <Button BorderBrush="Transparent" Content="Microsoft" FontSize="20"
+                        Background="Transparent" VerticalContentAlignment="Center"
+                        Foreground="#666666"/>
+                </DockPanel>
 
-				<Label Grid.Column="1" Content="Technologies"/>
-				<Label Grid.Column="2" Content="Documentation"/>
-				<Label Grid.Column="3" Content="Resource"/>
+                <Label Grid.Column="1" Content="Technologies" 
+                       VerticalContentAlignment="Center"/>
+                <Label Grid.Column="2" Content="Documentation"
+                       VerticalContentAlignment="Center"/>
+                <Label Grid.Column="3" Content="Resource"
+                       VerticalContentAlignment="Center"/>
 
-				<Border Margin="3" Grid.Column="5" BorderBrush="Gray" BorderThickness="1">
-					<Grid>
-						<Grid.ColumnDefinitions>
-							<ColumnDefinition/>
-							<ColumnDefinition Width="25"/>
-						</Grid.ColumnDefinitions>
+                <Border Margin="3" Grid.Column="5" BorderBrush="Gray" BorderThickness="1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="25"/>
+                        </Grid.ColumnDefinitions>
 
-						<TextBox Grid.Column="0" BorderBrush="Transparent" 
+                        <TextBox Grid.Column="0" BorderBrush="Transparent" 
 												Text="Search" FontSize="16" Foreground="Gray"/>
 
-						<Button Grid.Column="1" Content="🔎" Background="Transparent"
+                        <Button Grid.Column="1" Content="🔎" Background="Transparent"
 													BorderThickness="0"/>
 
-					</Grid>
-				</Border>
-			</Grid>
+                    </Grid>
+                </Border>
+            </Grid>
 
-			<!--////////////////////////////////////////////////////////////////////////////-->
+            <!--////////////////////////////////////////////////////////////////////////////-->
 
-			<Grid Grid.Row="1" Grid.ColumnSpan="3" Background="Black">
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="100"/>
-					<ColumnDefinition Width="Auto"/>
-					<ColumnDefinition Width="10"/>
-					<ColumnDefinition Width="Auto"/>
-					<ColumnDefinition Width="10"/>
-					<ColumnDefinition Width="Auto"/>
-					<ColumnDefinition Width="10"/>
-					<ColumnDefinition Width="Auto"/>
-					<ColumnDefinition Width="10"/>
-					<ColumnDefinition Width="Auto"/>
-					<ColumnDefinition Width="10"/>
-					<ColumnDefinition Width="Auto"/>
-					<ColumnDefinition Width="100"/>
-				</Grid.ColumnDefinitions>
+            <Grid Grid.Row="1" Grid.ColumnSpan="3" Background="Black">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-				<Label Grid.Column="1" Foreground="White" FontSize="20" Content="Docs"/>
+                <Label Grid.Column="1" Foreground="White" FontSize="20" Content="Docs"/>
 
-				<Label Grid.Column="3" Foreground="White" Content="Windows" VerticalContentAlignment="Center"/>
+                <Label Grid.Column="3" Foreground="White" Content="Windows" VerticalContentAlignment="Center"/>
 
-				<Label Grid.Column="5" Foreground="White" Content="Microsoft Azure" VerticalContentAlignment="Center"/>
+                <Label Grid.Column="5" Foreground="White" Content="Microsoft Azure" VerticalContentAlignment="Center"/>
 
-				<Label Grid.Column="7" Foreground="White" Content="Visual Studio" VerticalContentAlignment="Center"/>
+                <Label Grid.Column="7" Foreground="White" Content="Visual Studio" VerticalContentAlignment="Center"/>
 
-				<Label Grid.Column="9" Foreground="White" Content="Office" VerticalContentAlignment="Center"/>
+                <Label Grid.Column="9" Foreground="White" Content="Office" VerticalContentAlignment="Center"/>
 
-				<Label Grid.Column="11" Foreground="White" Content="More" VerticalContentAlignment="Center"/>
-			</Grid>
+                <Label Grid.Column="11" Foreground="White" Content="More" VerticalContentAlignment="Center"/>
+            </Grid>
 
-			<!--////////////////////////////////////////////////////////////////////////////-->
+            <!--////////////////////////////////////////////////////////////////////////////-->
 
-			<Label Grid.Row="2" Grid.Column="1" Content="Microsoft Docs" FontSize="30"/>
+            <Label Grid.Row="2" Grid.Column="1" Content="Microsoft Docs" FontSize="30"/>
 
-			<!--////////////////////////////////////////////////////////////////////////////-->
+            <!--////////////////////////////////////////////////////////////////////////////-->
 
-			<Label Grid.Row="3" Grid.Column="1" 
+            <Label Grid.Row="3" Grid.Column="1" 
 										Content="docs.microsoft.com is the home for Microsoft technical documentation, API reference, code examples,"/>
 
-			<!--////////////////////////////////////////////////////////////////////////////-->
+            <!--////////////////////////////////////////////////////////////////////////////-->
 
-			<Label Grid.Row="4" Grid.Column="1" 
+            <Label Grid.Row="4" Grid.Column="1" 
 										Content="quickstarts, and tutorials for developers and IT professionals."/>
 
-			<!--////////////////////////////////////////////////////////////////////////////-->
+            <!--////////////////////////////////////////////////////////////////////////////-->
 
-			<UniformGrid Grid.Row="5" Grid.ColumnSpan="3" Rows="3" Columns="5">
-				<Button Foreground="White" FontSize="20" Content="Windows" Background="#0078D7"/>
-				<Button Foreground="White" FontSize="20" Content="Azure" Background="#3498DB"/>
-				<Button Foreground="White" FontSize="20" Content="Visual Studio" Background="#5C2D91"/>
-				<Button Foreground="White" FontSize="20" Content="Office" Background="#D83B01"/>
-				<Button Foreground="White" FontSize="20" Content=".NET" Background="#5C2D91"/>
-				<Button Foreground="White" FontSize="20" Content="ASP.NET" Background="#6833A4"/>
-				<Button Foreground="White" FontSize="20" Content="SQL" Background="#E81123"/>
-				<Button Foreground="White" FontSize="20" Content="Enterprise Mobility + Security" Background="#107C10"/>
-				<Button Foreground="White" FontSize="20" Content="nuget" Background="#164F78"/>
-				<Button Foreground="White" FontSize="20" Content="Dynamics 365" Background="#002050"/>
-				<Button Foreground="White" FontSize="20" Content="Xamarin" Background="#3498DB"/>
-				<Button Foreground="White" FontSize="20" Content="Azure Bot Service" Background="#E3008C"/>
-				<Button Foreground="White" FontSize="20" Content="System Center" Background="#002050"/>
-				<Button Foreground="White" FontSize="20" Content="Microsoft Education" Background="#32145A"/>
-				<Button Foreground="White" FontSize="20" Content="PowerShell" Background="#0078D7"/>
-			</UniformGrid>
+            <UniformGrid Grid.Row="5" Grid.ColumnSpan="3" Rows="3" Columns="5" Margin="0 10 0 10">
 
-			<!--////////////////////////////////////////////////////////////////////////////-->
+                <Button Margin="0.3" Background="#0078D7" Cursor="Hand">
+                    <DockPanel>
+                        <Image Source="Win10.png" Width="30" Height="30"/>
+                        <Label Foreground="White" FontSize="20" Content="Windows"/>
+                    </DockPanel>
+                </Button>
 
-			<Label Grid.Row="6" Grid.Column="1" FontSize="25" Content="Docs Directory"/>
+                <Button Margin="0.3" Background="#3498DB" Cursor="Hand">
+                    <DockPanel>
+                        <Image Source="Azure.png" Width="30" Height="30"/>
+                        <Label Foreground="White" FontSize="20" Content="Azure"/>
+                    </DockPanel>
+                </Button>
 
-			<!--////////////////////////////////////////////////////////////////////////////-->
+                <Button Margin="0.3" Background="#5C2D91" Cursor="Hand">
+                    <DockPanel>
+                        <Image Source="VS.png" Width="30" Height="30"/>
+                        <Label Foreground="White" FontSize="20" Content="Visual Studio"/>
+                    </DockPanel>
+                </Button>
 
-			<Grid Grid.Row="7" Grid.Column="1">
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition/>
-					<ColumnDefinition/>
-					<ColumnDefinition/>
-				</Grid.ColumnDefinitions>
+                <Button Margin="0.3" Background="#D83B01" Cursor="Hand">
+                    <DockPanel>
+                        <Image Source="Office.png" Width="30" Height="30"/>
+                        <Label Foreground="White" FontSize="20" Content="Office"/>
+                    </DockPanel>
+                </Button>
 
-				<StackPanel Grid.Column="0" Orientation="Vertical">
-					
-					<DockPanel Margin="5">
-						<Button BorderThickness="0" Width="5" Height="30"/>
-						<Label Foreground="#0050C5" FontSize="15" Content="ASP.NET"/>
-					</DockPanel>
 
-					<DockPanel Margin="5">
-						<Button BorderThickness="0" Width="5" Height="30"/>
-						<Label Foreground="#0050C5" FontSize="15"  Content="Azure"/>
-					</DockPanel>
+                <Button Margin="0.3" Foreground="White" FontSize="20" Background="#5C2D91" Content=".NET" Cursor="Hand"/>
+                <Button Margin="0.3" Foreground="White" FontSize="20" Background="#6833A4" Content="ASP.NET" Cursor="Hand"/>
+                <Button Margin="0.3" Foreground="White" FontSize="20" Background="#E81123" Content="SQL" Cursor="Hand"/>
+                
+                <Button Margin="0.3" Foreground="White" FontSize="20" Background="#107C10" Cursor="Hand">
+                    <TextBlock Text="Enterprise Mobility + Security" TextWrapping="Wrap" TextAlignment="Center"/>
+                </Button>
 
-					<DockPanel Margin="5">
-						<Button BorderThickness="0" Width="5" Height="30"/>
-						<Label Foreground="#0050C5" FontSize="15" Content="Azure Bot Service"/>
-					</DockPanel>
+                <Button Margin="0.3" Background="#164F78" Cursor="Hand">
+                    <DockPanel>
+                        <Image Source="Nuget.png" Width="30" Height="30"/>
+                        <Label Foreground="White" FontSize="20" Content="nuget"/>
+                    </DockPanel>
+                </Button>
 
-					<DockPanel Margin="5">
-						<Button BorderThickness="0" Width="5" Height="30"/>
-						<Label Foreground="#0050C5" FontSize="15" Content="Azure Bot Service"/>
-					</DockPanel>
+                <Button Margin="0.3" Foreground="White" FontSize="20" Background="#002050" Content="Dynamics 365" Cursor="Hand"/>
 
-					<DockPanel Margin="5">
-						<Button BorderThickness="0" Width="5" Height="30"/>
-						<Label Foreground="#0050C5" FontSize="15" Content="Azure Bot Service"/>
-					</DockPanel>
+                <Button Margin="0.3" Background="#3498DB" Cursor="Hand">
+                    <DockPanel>
+                        <Image Source="Xamarin.png" Width="30" Height="30"/>
+                        <Label Foreground="White" FontSize="20" Content="Xamarin"/>
+                    </DockPanel>
+                </Button>
 
-					<DockPanel Margin="5">
-						<Button BorderThickness="0" Width="5" Height="30"/>
-						<Label Foreground="#0050C5" FontSize="15" Content="Azure Bot Service"/>
-					</DockPanel>
+                <Button Margin="0.3" Foreground="White" FontSize="20" Background="#E3008C" Content="Azure Bot Service" Cursor="Hand"/>
+                <Button Margin="0.3" Foreground="White" FontSize="20" Background="#002050" Content="System Center" Cursor="Hand"/>
+                <Button Margin="0.3" Foreground="White" FontSize="20" Background="#32145A" Content="Microsoft Education" Cursor="Hand"/>
 
-					<DockPanel Margin="5">
-						<Button BorderThickness="0" Width="5" Height="30"/>
-						<Label Foreground="#0050C5" FontSize="15" Content="Azure Bot Service"/>
-					</DockPanel>
-					
-					<DockPanel Margin="5">
-						<Button BorderThickness="0" Width="5" Height="30"/>
-						<Label Foreground="#0050C5" FontSize="15" Content="Azure Bot Service"/>
-					</DockPanel>
+                <Button Margin="0.3" Background="#0078D7" Cursor="Hand">
+                    <DockPanel>
+                        <Image Source="PowerShell.png" Width="30" Height="30"/>
+                        <Label Foreground="White" FontSize="20" Content="PowerShell"/>
+                    </DockPanel>
+                </Button>
+                
+            </UniformGrid>
 
-				</StackPanel>
+            <!--////////////////////////////////////////////////////////////////////////////-->
 
-				<StackPanel Grid.Column="1">
+            <Label Grid.Row="6" Grid.Column="1" FontSize="25" Content="Docs Directory"/>
 
-				</StackPanel>
+            <!--////////////////////////////////////////////////////////////////////////////-->
 
-				<StackPanel Grid.Column="2">
+            <Grid Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
 
-				</StackPanel>
+                <StackPanel Grid.Column="0" Orientation="Vertical">
 
-			</Grid>
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="ASP.NET"/>
+                    </DockPanel>
 
-			<!--////////////////////////////////////////////////////////////////////////////-->
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15"  Content="Azure"/>
+                    </DockPanel>
 
-		</Grid>
-	</ScrollViewer>
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Azure Bot Service"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Bing Ads"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Biztalk Server"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="C++"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Cognitive Toolkit (CNTK)"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Common Data Service"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Cortana Skills"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Dynamics 365"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Enterprise Mobility + Security"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Entity Framework"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="HealthBot"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="HealthVault"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Intune"/>
+                    </DockPanel>
+
+                </StackPanel>
+
+                <!--////////////////////////////////////////////////////////////////////////////-->
+
+                <StackPanel Grid.Column="1">
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Internet Information Services"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15"  Content="Office"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Microsoft 365 Business"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Microsoft 365 Enterprise"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Microsoft Education"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Microsoft Flow"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Microsoft IoT Central"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Microsoft Machine Learning Server"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Microsoft Partner Center"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Microsoft Quantum Development"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Microsoft Security Response Center"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Microsoft Stream"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Microsoft Teams"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content=".NET"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="NuGet"/>
+                    </DockPanel>
+
+                </StackPanel>
+
+                <!--////////////////////////////////////////////////////////////////////////////-->
+
+                <StackPanel Grid.Column="2">
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="PlayReady"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15"  Content="PowerApps"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Power BI"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="PowerShell"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="SharePoint"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="SQL Server"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="System Center"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="System Center Configuration Manager"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Virtualization"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Visual Studio"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Visual Studio IDE"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Visual Studio Team Services"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Windows"/>
+                    </DockPanel>
+
+                    <DockPanel Margin="2" Cursor="Hand">
+                        <Button BorderThickness="0" Width="5" Height="30"/>
+                        <Label Foreground="#0050C5" FontSize="15" Content="Xamarin"/>
+                    </DockPanel>
+
+                </StackPanel>
+
+            </Grid>
+
+            <!--////////////////////////////////////////////////////////////////////////////-->
+
+            <Label Grid.Row="8" Grid.ColumnSpan="3" Background="Black"/>
+
+            <!--////////////////////////////////////////////////////////////////////////////-->
+
+            <Grid Grid.Row="9" Grid.ColumnSpan="3" Background="Black">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="1" Content="🌎 English (United States)" 
+                       Foreground="#1D59B6" FontSize="15" VerticalContentAlignment="Center"/>
+
+                <Label Grid.Column="3" Content="Privacy &amp; Cookies" 
+                       Foreground="#1D59B6" FontSize="15" VerticalContentAlignment="Center"/>
+
+                <Label Grid.Column="4" Content="˙" Foreground="#ABAB9D" FontSize="50" 
+                       VerticalContentAlignment="Center"/>
+
+                <Label Grid.Column="5" Content="Terms of Use" 
+                       Foreground="#1D59B6" FontSize="15" VerticalContentAlignment="Center"/>
+
+                <Label Grid.Column="6" Content="˙" Foreground="#ABAB9D" FontSize="50" 
+                       VerticalContentAlignment="Center"/>
+
+                <Label Grid.Column="7" Content="Feedback" 
+                       Foreground="#1D59B6" FontSize="15" VerticalContentAlignment="Center"/>
+
+                <Label Grid.Column="8" Content="˙" Foreground="#ABAB9D" FontSize="50" 
+                       VerticalContentAlignment="Center"/>
+
+                <Label Grid.Column="9" Content="Trademarks" 
+                       Foreground="#1D59B6" FontSize="15" VerticalContentAlignment="Center"/>
+
+            </Grid>
+
+            <!--////////////////////////////////////////////////////////////////////////////-->
+
+            <Label Grid.Row="10" Grid.ColumnSpan="3" Background="Black"/>
+
+            <!--////////////////////////////////////////////////////////////////////////////-->
+
+
+        </Grid>
+    </ScrollViewer>
 </Window>

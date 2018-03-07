@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -92,6 +93,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Microsoft.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Nuget.PNG" />
+    <Resource Include="Office.PNG" />
+    <Resource Include="PowerShell.PNG" />
+    <Resource Include="VS.PNG" />
+    <Resource Include="Win10.PNG" />
+    <Resource Include="Xamarin.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Azure.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
