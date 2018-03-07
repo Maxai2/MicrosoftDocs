@@ -1,0 +1,15 @@
+C:\Users\Mahm_iz81\Documents\Visual Studio 2017\Repos\MicrosoftDocs\MicrosoftDocs\MicrosoftDocs\bin\Debug\MicrosoftDocs.exe.config
+C:\Users\Mahm_iz81\Documents\Visual Studio 2017\Repos\MicrosoftDocs\MicrosoftDocs\MicrosoftDocs\bin\Debug\MicrosoftDocs.exe
+C:\Users\Mahm_iz81\Documents\Visual Studio 2017\Repos\MicrosoftDocs\MicrosoftDocs\MicrosoftDocs\bin\Debug\MicrosoftDocs.pdb
+C:\Users\Mahm_iz81\Documents\Visual Studio 2017\Repos\MicrosoftDocs\MicrosoftDocs\MicrosoftDocs\obj\Debug\MicrosoftDocs.csprojResolveAssemblyReference.cache
+C:\Users\Mahm_iz81\Documents\Visual Studio 2017\Repos\MicrosoftDocs\MicrosoftDocs\MicrosoftDocs\obj\Debug\MainWindow.g.cs
+C:\Users\Mahm_iz81\Documents\Visual Studio 2017\Repos\MicrosoftDocs\MicrosoftDocs\MicrosoftDocs\obj\Debug\App.g.cs
+C:\Users\Mahm_iz81\Documents\Visual Studio 2017\Repos\MicrosoftDocs\MicrosoftDocs\MicrosoftDocs\obj\Debug\MicrosoftDocs_MarkupCompile.cache
+C:\Users\Mahm_iz81\Documents\Visual Studio 2017\Repos\MicrosoftDocs\MicrosoftDocs\MicrosoftDocs\obj\Debug\MicrosoftDocs_MarkupCompile.lref
+C:\Users\Mahm_iz81\Documents\Visual Studio 2017\Repos\MicrosoftDocs\MicrosoftDocs\MicrosoftDocs\obj\Debug\MainWindow.baml
+C:\Users\Mahm_iz81\Documents\Visual Studio 2017\Repos\MicrosoftDocs\MicrosoftDocs\MicrosoftDocs\obj\Debug\MicrosoftDocs.g.resources
+C:\Users\Mahm_iz81\Documents\Visual Studio 2017\Repos\MicrosoftDocs\MicrosoftDocs\MicrosoftDocs\obj\Debug\MicrosoftDocs.Properties.Resources.resources
+C:\Users\Mahm_iz81\Documents\Visual Studio 2017\Repos\MicrosoftDocs\MicrosoftDocs\MicrosoftDocs\obj\Debug\MicrosoftDocs.csproj.GenerateResource.Cache
+C:\Users\Mahm_iz81\Documents\Visual Studio 2017\Repos\MicrosoftDocs\MicrosoftDocs\MicrosoftDocs\obj\Debug\MicrosoftDocs.csproj.CoreCompileInputs.cache
+C:\Users\Mahm_iz81\Documents\Visual Studio 2017\Repos\MicrosoftDocs\MicrosoftDocs\MicrosoftDocs\obj\Debug\MicrosoftDocs.exe
+C:\Users\Mahm_iz81\Documents\Visual Studio 2017\Repos\MicrosoftDocs\MicrosoftDocs\MicrosoftDocs\obj\Debug\MicrosoftDocs.pdb
