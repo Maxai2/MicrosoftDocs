@@ -9,7 +9,7 @@
         MinWidth="940" MinHeight="1002"
         SizeChanged="Window_SizeChanged">
 
-    <ScrollViewer>
+    <ScrollViewer >
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -111,13 +111,13 @@
 
             <!--////////////////////////////////////////////////////////////////////////////-->
 
-            <Label Grid.Row="3" Grid.Column="1" 
-										Content="docs.microsoft.com is the home for Microsoft technical documentation, API reference, code examples,"/>
+            <TextBlock Grid.Row="3" Grid.Column="1"
+										Text="docs.microsoft.com is the home for Microsoft technical documentation, API reference, code examples, &#10;quickstarts, and tutorials for developers and IT professionals."/>
 
-            <!--////////////////////////////////////////////////////////////////////////////-->
+											            <!--////////////////////////////////////////////////////////////////////////////-->
 
-            <Label Grid.Row="4" Grid.Column="1" 
-										Content="quickstarts, and tutorials for developers and IT professionals."/>
+            <!--<Label Grid.Row="4" Grid.Column="1" 
+										Content="quickstarts, and tutorials for developers and IT professionals."/>-->
 
             <!--////////////////////////////////////////////////////////////////////////////-->
 
